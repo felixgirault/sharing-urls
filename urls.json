@@ -1,0 +1,56 @@
+{
+	"facebook": {
+		"url": "https://www.facebook.com/sharer/sharer.php",
+		"doc": "https://developers.facebook.com/docs/plugins/share-button",
+		"params": {
+			"u": {
+				"doc": "The URL of the page to share.",
+				"required": true
+			}
+		}
+	},
+	"google-plus": {
+		"url": "https://plus.google.com/share",
+		"doc": "https://developers.google.com/+/web/share/",
+		"params": {
+			"url": {
+				"doc": "The URL of the page to share. This value should be url encoded.",
+				"required": true
+			},
+			"hl": {
+				"doc": "The language code for the locale to use on the Google+ sharing page (see https://developers.google.com/+/web/share/#available-languages)."
+			}
+		}
+	},
+	"twitter": {
+		"url": "http://twitter.com/intent/tweet",
+		"doc": "https://dev.twitter.com/docs/intents",
+		"params": {
+			"url": {
+				"doc": "A fully-qualified HTTP or HTTPS-based URL, URL-encoded. The provided URL will be shortened with t.co and appended to the end of the Tweet.",
+				"example": "http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FIn_Watermelon_Sugar",
+				"required": true
+			},
+			"via": {
+				"doc": "A screen name to associate with the Tweet. The provided screen name will be appended to the end of the tweet with the text: \"via @username\" \"Via\" will be translated to the proper locality of the posting user, if supported. Potentially drives new followers to the target account.",
+				"example": "_fg_"
+			},
+			"text": {
+				"doc": "Pre-prepared, properly UTF-8 & percent-encoded Tweet body text. Users will still be able to edit the pre-prepared text. This field has a potential of 140 characters maximum, but consider the implications of other parameters like url and via.",
+				"example": "Hello world"
+			},
+			"in_reply_to": {
+				"doc": "Associate this Tweet with a specific Tweet by indicating its status ID here. The originating Tweet Author's screen name will be automatically prepended to the reply.",
+				"example": "35782000644194304"
+			},
+			"hashtags": {
+				"doc": "Add context to the pre-prepared status update by appending #hashtags.",
+				"example": "twitter,twitterapi"
+			},
+			"related": {
+				"doc": "Suggest accounts related to the your content or intention by comma-separating a list of screen names.",
+				"example": "Leimina,scharrier"
+			}
+		}
+	}
+}
